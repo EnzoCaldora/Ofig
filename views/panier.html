@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+
+<html lang="fr-FR" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Figurine OnlineShop" />
+    <meta name="author" content="Caldora Enzo" />
+    <meta name="keywords" content="Figurine Final Fantasy shop" />
+    <title> oFig </title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/cartstyle.css">
+    <link rel="icon" type="icon/png" href="/images/cloud.png">
+    <script src="https://kit.fontawesome.com/13462040d3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Banner-->
+    <header class="banner">
+        <h1><a href="../index.html">oFig </a><span class="fig" aria-label="what the WebShop sell">Figurines et statuettes</span></h1>
+        <nav><a href="./views/panier.html"><i class="fas fa-shopping-cart" style="color: #ffffff;"></i> Mon panier</a></nav>
+        <h2 class="banner-title">Votre panier <em>3 produits</em></h2>
+    </header>
+    <!-- Banner End-->
+
+    <main>
+        <section class="section__table">
+            <h3>Votre panier</h3>
+            <table class="cart-products">
+
+
+                <thead class="cart-products__head">
+                  <tr class="cart-products__head-line">
+                    <th class="cart-products__head-item">Figurine</th>
+                    <th class="cart-products__head-item">Prix unitaire</th>
+                    <th class="cart-products__head-item">Quantité</th>
+                  </tr>
+                </thead>
+      
+      
+                <tbody class="cart-products__body">
+      
+      
+                  <tr class="cart-products__body-line">
+                    <td class="cart-products__body-item">Cloud Strife</td>
+                    <td class="cart-products__body-item">59 €</td>
+                    <td class="cart-products__body-item">
+                      <input type="number" class="cart-products__qty" min="0" name="qty[0]" value="1" />
+                      <a href="#" class="cart-products__remove-product" >supprimer</a>
+                    </td>
+                  </tr>
+      
+                  <tr class="cart-products__body-line">
+                    <td class="cart-products__body-item">Tifa Lockhart</td>
+                    <td class="cart-products__body-item">69 €</td>
+                    <td class="cart-products__body-item">
+                      <input type="number" class="cart-products__qty" min="0" name="qty[1]" value="1" />
+                      <a href="#" class="cart-products__remove-product" >supprimer</a>
+                    </td>
+                  </tr>
+      
+                  <tr class="cart-products__body-line">
+                    <td class="cart-products__body-item">Barret Wallace</td>
+                    <td class="cart-products__body-item">69 €</td>
+                    <td class="cart-products__body-item">
+                      <input type="number" class="cart-products__qty" min="0" name="qty[2]" value="1" />
+                      <a href="#" class="cart-products__remove-product" >supprimer</a>
+                    </td>
+                  </tr>
+      
+                </tbody>
+      
+                <tfoot class="cart-products__foot">
+                  <tr class="cart-products__foot-line">
+                    <td class="cart-products__foot-item" colspan="2">Total de la commande :</td>
+                    <td class="cart-products__foot-item cart-products__foot-item--price">197 €</td>
+                  </tr>
+                </tfoot>
+      
+              </table>
+        </section>
+
+
+        <section class="section__delivery">
+            <header class="section__delivery__header">
+                <h3>Préférences de livraison</h3>
+            </header>
+            <form id="section__delivery__address__form__shipping-address">
+                <div class="section__delivery__div-container">
+
+                    <article class="section__article__options">
+                        <div class="section__article__delivery__input">
+
+                            <fieldset>
+                                <legend>Où souhaitez-vous être livré ?</legend>
+                                <label for="myaddress"><input type="radio" id="myaddress" name="address" checked>Mon
+                                    adresse courante</label>
+                                <label for="otheraddress"><input type="radio" id="otheraddress"
+                                        name="address">Autre
+                                    adresse</label>
+                            </fieldset>
+                        </div>
+                        <div class="section__delivery__options">
+                            <fieldset class="checkbox">
+                                <legend>Options</legend>
+                                <label for="message_tracking"><input type="checkbox" id="sms_tracking"
+                                        name="sms_tracking" checked>Suivi de livraison par sms (inclus)</label>
+                                <label for="satisfied_refunded"><input type="checkbox" id="satisfied_refunded"
+                                        name="satisfied_refunded">Satisfait ou remboursé (+ 2 euros)</label>
+                                <label for="warranty"><input type="checkbox" id="warranty" name="warranty">Garantie 2
+                                    ans (+
+                                    10 euros)</label>
+                            </fieldset>
+                        </div>
+                    </article>
+                    <article class="section__article__address">
+                        <div class="section__article__delivery__address">
+                            <fieldset class="fieldset__address">
+                                <legend class="fieldset__address__legend">Adresse</legend>
+
+                                <label for="way">Rue</label>
+                                <textarea name="way" id="way" cols="30" rows="2" required></textarea>
+                                <label for="postcode">Code postal</label>
+                                <textarea name="postcode" id="postcode" cols="30" rows="2" required></textarea>
+                                <label for="postcode">Ville</label>
+                                <textarea name="city" id="city" cols="30" rows="2" required></textarea>
+                            </fieldset>
+                            <fieldset class="fieldset__further">
+                                <legend class="fieldset__further__legend">Informations complémentaires</legend>
+                                <label for="further-informations"></label>
+                                <textarea name="further-informations" placeholder="interphones, bâtiments, etc..."
+                                    id="further-informations" cols="35" rows="4"></textarea>
+                            </fieldset>
+
+                        </div>
+                    </article>
+
+                    <section class="section__total">
+                        <div class="section__total__text">
+                            <h3>Montant total à régler:</h3>
+                            <span class="section__total__price">197 €</span>
+                        </div>
+                    </section>
+
+                    <section class="section__pay">
+
+                        <div class="section__pay__input">
+                            <a href="../index.html">Continuer vos achat</a>
+                            <button type="submit">Valider et payer</button>
+                        </div>
+                    </section>
+                </div>
+
+
+
+
+
+            </form>
+        </section>
+
+        <!-- Sales tab with link-->
+        <aside id="soldes" aria-label="Onglet soldes">
+            <a href="soldes.html" id="soldes-link">
+                SOLDES
+            </a>
+        </aside>
+        <!-- Decoration above footer-->
+        <div class="footer-decoration" aria-hidden="true">
+            <img src="images/deco.png" alt="">
+        </div>
+
+    </main>
+
+    <footer>
+        <p>oFig - toutes les images sont sous copyright SquareEnix</p>
+    </footer>
+
+</body>
+
+</html>
